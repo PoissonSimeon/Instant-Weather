@@ -1,0 +1,252 @@
+/* style.css - Version harmonisée et épurée sans dark mode, style "bulle" */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3e5ff, #ffffff);
+    color: #444;
+    margin: 0;
+    padding: 0 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #b900ff;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 8px 20px rgba(185, 0, 255, 0.3);
+}
+
+header h1, footer p {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 2rem 1rem;
+    flex: 1;
+    max-width: 1000px;
+    margin: 2rem auto 4rem auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#cityForm {
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid #d3a9ff;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 25px rgba(185, 0, 255, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Harmonisation zone de texte et select */
+.input-group, input[type="text"], select {
+    border: none;
+    border-radius: 30px;
+    background: #f0dfff;
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 8px #b900ff;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(185, 0, 255, 0.2);
+}
+
+.input-group .material-icons {
+    padding: 0.75rem 1rem;
+    background: #b066ff;
+    color: #fff;
+    border-radius: 30px 0 0 30px;
+}
+
+select {
+    display: block;
+    width: 100%;
+    background: #f0dfff;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 30px;
+    padding: 0.75rem 1.2rem;
+    box-shadow: 0 4px 12px rgba(185, 0, 255, 0.2);
+    cursor: pointer;
+}
+
+/* Slider harmonisé */
+input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #d3a9ff;
+    outline: none;
+    transition: background 0.2s;
+    margin-bottom: 1rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b900ff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(185, 0, 255, 0.5);
+    transition: transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b900ff;
+    cursor: pointer;
+}
+
+/* Centrage du texte "Nombre de jours" et "1 journée" */
+.days-section label {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #9000cc;
+    font-weight: bold;
+}
+
+.days-section .slider-container {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: #9000cc;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.days-section .slider-value {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Options à cocher améliorées avec texte centré */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+}
+
+.checkbox-group label {
+    background: #f0dfff;
+    padding: 0.75rem 1rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrage horizontal */
+    text-align: center;      /* Centrage du texte */
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(185, 0, 255, 0.15);
+}
+
+.checkbox-group label:hover {
+    background: #e6c9ff;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #b900ff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #b900ff;
+    border-color: #b900ff;
+}
+
+/* Bouton Valider centré et stylisé */
+button {
+    background: #b900ff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    box-shadow: 0 6px 15px rgba(185, 0, 255, 0.3);
+    display: block;
+    margin: 1rem auto;
+}
+
+button:hover {
+    background: #9000cc;
+    box-shadow: 0 8px 20px rgba(144, 0, 204, 0.5);
+}
+
+.weather-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.weather-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #d3a9ff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 18px rgba(185, 0, 255, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(185, 0, 255, 0.25);
+}
+
+.temp-info, .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    body { padding: 0 1rem; }
+    main {
+        max-width: 100%;
+        padding: 1.5rem 0.5rem;
+        margin: 1.5rem auto 3rem auto;
+    }
+    .checkbox-group { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 1.3rem; }
+    .weather-cards { grid-template-columns: 1fr; }
+    .checkbox-group { grid-template-columns: 1fr; }
+}
