@@ -1,4 +1,3 @@
-/* style.css - Version harmonisée et épurée sans dark mode, style "bulle" */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -46,7 +45,7 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Harmonisation zone de texte et select */
+
 .input-group, input[type="text"], select {
     border: none;
     border-radius: 30px;
@@ -89,7 +88,7 @@ select {
     cursor: pointer;
 }
 
-/* Slider harmonisé */
+
 input[type="range"] {
     width: 100%;
     height: 8px;
@@ -124,7 +123,6 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
 }
 
-/* Centrage du texte "Nombre de jours" et "1 journée" */
 .days-section label {
     text-align: center;
     display: block;
@@ -150,7 +148,7 @@ input[type="range"]::-moz-range-thumb {
     margin-bottom: 1rem;
 }
 
-/* Options à cocher améliorées avec texte centré */
+
 .checkbox-group {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -163,8 +161,8 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrage horizontal */
-    text-align: center;      /* Centrage du texte */
+    justify-content: center; 
+    text-align: center;     
     gap: 0.5rem;
     cursor: pointer;
     transition: background 0.2s ease, box-shadow 0.2s ease;
@@ -188,7 +186,7 @@ input[type="checkbox"]:checked {
     border-color: #b900ff;
 }
 
-/* Bouton Valider centré et stylisé */
+
 button {
     background: #b900ff;
     color: #fff;
