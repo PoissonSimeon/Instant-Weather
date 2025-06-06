@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #f3e5ff, #ffffff);
@@ -19,11 +18,20 @@ header {
     box-shadow: 0 8px 20px rgba(185, 0, 255, 0.3);
 }
 
-header h1, footer p {
+header h1, header p {
     margin: 0;
+}
+
+header h1 {
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 main {
@@ -45,14 +53,26 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+#cityForm h2 {
+    color: #b900ff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
 
-.input-group, input[type="text"], select {
+.input-group {
+    margin-bottom: 1rem;
+}
+
+input[type="text"], select {
+    width: 100%;
     border: none;
     border-radius: 30px;
     background: #f0dfff;
     padding: 0.75rem 1.2rem;
     font-size: 1rem;
     transition: box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(185, 0, 255, 0.2);
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus, select:focus {
@@ -60,34 +80,15 @@ input[type="text"]:focus, select:focus {
     box-shadow: 0 0 8px #b900ff;
 }
 
-.input-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(185, 0, 255, 0.2);
-}
-
-.input-group .material-icons {
-    padding: 0.75rem 1rem;
-    background: #b066ff;
-    color: #fff;
-    border-radius: 30px 0 0 30px;
-}
-
 select {
     display: block;
-    width: 100%;
     background: #f0dfff;
     border: none;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: 30px;
-    padding: 0.75rem 1.2rem;
-    box-shadow: 0 4px 12px rgba(185, 0, 255, 0.2);
     cursor: pointer;
 }
-
 
 input[type="range"] {
     width: 100%;
@@ -96,7 +97,7 @@ input[type="range"] {
     background: #d3a9ff;
     outline: none;
     transition: background 0.2s;
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -121,37 +122,43 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 50%;
     background: #b900ff;
     cursor: pointer;
+    border: none;
+}
+
+.days-section {
+    margin: 1.5rem 0;
 }
 
 .days-section label {
-    text-align: center;
     display: block;
-    width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;
     color: #9000cc;
     font-weight: bold;
 }
 
 .days-section .slider-container {
     text-align: center;
-    display: block;
-    width: 100%;
     color: #9000cc;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.days-section .slider-value {
-    text-align: center;
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+fieldset {
+    border: 2px solid #d3a9ff;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
+legend {
+    color: #b900ff;
+    font-weight: bold;
+    padding: 0 1rem;
+}
 
 .checkbox-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 0.75rem;
 }
 
@@ -174,18 +181,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #b900ff;
-    border-radius: 6px;
+    width: 18px;
+    height: 18px;
+    accent-color: #b900ff;
     cursor: pointer;
 }
-
-input[type="checkbox"]:checked {
-    background-color: #b900ff;
-    border-color: #b900ff;
-}
-
 
 button {
     background: #b900ff;
@@ -208,7 +208,7 @@ button:hover {
 
 .weather-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -220,6 +220,8 @@ button:hover {
     margin-bottom: 1.5rem;
     box-shadow: 0 6px 18px rgba(185, 0, 255, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .weather-card:hover {
@@ -227,24 +229,106 @@ button:hover {
     box-shadow: 0 12px 30px rgba(185, 0, 255, 0.25);
 }
 
+.weather-card h3 {
+    color: #b900ff;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #f0dfff;
+    padding-bottom: 0.5rem;
+}
+
+.weather-main {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.weather-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b900ff;
+    margin: 0.5rem 0;
+}
+
+.temp-range {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.weather-details {
+    margin-top: 1rem;
+}
+
+.weather-icon {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
 .temp-info, .info-row {
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 0;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #666;
+}
+
+.info-value {
+    color: #b900ff;
+    font-weight: bold;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #b900ff;
+    font-size: 1.1rem;
+}
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: #ff0066;
+    background: #ffe6f0;
+    border-radius: 20px;
+    border: 1px solid #ffccdd;
 }
 
 @media (max-width: 768px) {
-    body { padding: 0 1rem; }
+    body { 
+        padding: 0 1rem; 
+    }
     main {
         max-width: 100%;
         padding: 1.5rem 0.5rem;
         margin: 1.5rem auto 3rem auto;
     }
-    .checkbox-group { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+    .checkbox-group { 
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    }
+    .weather-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
-    header h1 { font-size: 1.3rem; }
-    .weather-cards { grid-template-columns: 1fr; }
-    .checkbox-group { grid-template-columns: 1fr; }
+    header h1 { 
+        font-size: 1.3rem; 
+    }
+    .checkbox-group { 
+        grid-template-columns: 1fr; 
+    }
 }
