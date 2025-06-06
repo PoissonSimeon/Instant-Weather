@@ -12,7 +12,7 @@ L'application utilise :
 ## 📚 Fonctionnalités
 ✅ Recherche de communes par code postal.  
 ✅ Affichage des prévisions météo sur plusieurs jours.  
-✅ Options supplémentaires (vent, pluie, coordonnées, etc.).  
+✅ Options supplémentaires telle que vent moyen et le cumul de pluie (latitude, longitude et direction du vent ne parviennent pas à s'afficher)
 ✅ Interface simple et responsive, sans besoin de recharger la page.  
 
 ## 🚀 Lancer le projet
